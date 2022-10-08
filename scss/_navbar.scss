@@ -1,0 +1,77 @@
+nav.navbar {
+  // * MAIN NAV AREA
+  #myCustomNav {
+    ul li a {
+      padding: 0 15px;
+      color: #11161e;
+      @include h7();
+      font-weight: 600;
+      &:hover,
+      &.active {
+        color: $primaryColor;
+      }
+    }
+  }
+
+  //*   USER ACCESS AREA
+  .userAccess {
+    @include userAccess();
+  }
+}
+//* NAVBAR SM
+.navbar-sm {
+  background-color: white;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  
+  .menu {
+    .offcanvas {
+      max-width: 350px;
+    }
+    .menuTogglerIcon {
+      color: $primaryColor;
+      font-size: 1.2rem;
+    }
+    .offCanvasMenu {
+      position: relative;
+    }
+    .offCanvasHeader {
+      padding: 10px 15px 25px;
+      .logo-sm {
+        max-height: 50px;
+      }
+    }
+    .offCanvasBody {
+      ul {
+        text-align: center;
+        padding: 0;
+        li {
+          padding: 15px 0;
+          border-bottom: 1px solid #eee;
+        }
+        a {
+          display: block;
+          color: $threeDimensionColor;
+          &:focus,
+          &.active {
+            color: $primaryColor;
+          }
+        }
+      }
+    }
+  }
+  .logo {
+    padding: 10px 0;
+  }
+  .userAccess{
+    @include userAccess();
+    .notification{
+      height: auto;
+      span{
+
+        display: inline-block;
+        max-width: 30px;
+      word-wrap: break-word;
+      }
+    }
+  }
+}

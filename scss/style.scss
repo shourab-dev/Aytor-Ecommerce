@@ -1,0 +1,11 @@
+//*IMPORT STATEMENTS
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;700&display=swap");
+@import "./common", "./functions" , "./navbar";
+//*IMPORT STATEMENTS ENDS
+
+body {
+  font-family: "Josefin Sans", sans-serif;
+}
+
+//* HOME PAGE IMPORT
+@import "./home"

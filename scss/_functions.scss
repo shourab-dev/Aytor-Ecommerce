@@ -1,0 +1,33 @@
+@mixin h7() {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+}
+@mixin userAccess() {
+  & ul li {
+    display: inline-block;
+    margin: 0 10px;
+
+    a {
+      color: $threeDimensionColor;
+      &.cart {
+        position: relative;
+        .notification {
+          min-width: 20px;
+          min-height: 20px;
+          padding: 0 5px;
+          font-size: 14px;
+          color: white;
+          background-color: $primaryColor;
+          display: grid;
+          place-items: center;
+          border-radius: 15px;
+          line-height: 15px;
+          position: absolute;
+          top: -5px;
+          left: 12px;
+        }
+      }
+    }
+  }
+}
