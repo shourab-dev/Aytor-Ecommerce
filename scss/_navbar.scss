@@ -1,4 +1,8 @@
+@import "./searchBar";
 nav.navbar {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  position: relative;
+  z-index: 11;
   // * MAIN NAV AREA
   #myCustomNav {
     ul li a {
@@ -22,7 +26,8 @@ nav.navbar {
 .navbar-sm {
   background-color: white;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  
+ position: relative;
+  z-index: 11;
   .menu {
     .offcanvas {
       max-width: 350px;
@@ -62,16 +67,21 @@ nav.navbar {
   .logo {
     padding: 10px 0;
   }
-  .userAccess{
+  .userAccess {
     @include userAccess();
-    .notification{
+    .notification {
       height: auto;
-      span{
-
+      span {
         display: inline-block;
         max-width: 30px;
-      word-wrap: break-word;
+        word-wrap: break-word;
       }
     }
   }
+}
+.search-lg{
+  font-size: 18px;
+  width: 16px;
+  height: 16px;
+  display: inline-block;
 }

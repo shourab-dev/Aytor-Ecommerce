@@ -1,0 +1,64 @@
+.searchArea {
+  position: absolute;
+  padding: 100px 40px 40px;
+  background-color: white;
+  z-index: 10;
+  inset: 93px 0 0 0;
+  @media (max-width: 991px) {
+    inset: 87px 0 0 0;
+    padding: 20px 10px;
+  }
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: 0.35s ease-in-out;
+ 
+
+  .searchBar {
+    display: grid;
+    place-items: center;
+    opacity: 0;
+    margin-top: -50px;
+    transition: 0.3s ease-in;
+    transition-delay: 0.2s;
+    input {
+      display: block;
+      width: clamp(300px, 70vw, 750px);
+      border: none;
+      border-bottom: 1px solid #888;
+      font-size: 2rem;
+      @media(max-width:768px){
+        font-size: 1.2rem;
+      }
+      outline: none;
+      text-align: center;
+    }
+  }
+
+  .searchResult {
+    margin-top: 80px;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s ease-in;
+    transition-delay: 0.5s;
+    & > p {
+      text-align: center;
+    }
+
+    .products {
+      @include products();
+    }
+  }
+
+   &.show {
+    transform: scaleY(1);
+    .searchBar{
+        margin-top: 0;
+        opacity: 1;
+    }
+    .searchResult{
+        opacity: 1;
+        margin-top: 40px;
+        visibility: visible;
+    }
+  }
+}
