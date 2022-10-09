@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;700&display=swap");
 a {
   text-decoration: none;
@@ -17,7 +18,7 @@ ul, ol, h1, h2, h3, h4, h5, h6, p, span {
   position: absolute;
   padding: 100px 40px 40px;
   background-color: white;
-  z-index: 10;
+  z-index: 99;
   inset: 93px 0 0 0;
   -webkit-transform: scaleY(0);
           transform: scaleY(0);
@@ -129,6 +130,7 @@ nav.navbar {
           box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   position: relative;
   z-index: 11;
+  padding: 0 50px;
 }
 nav.navbar #myCustomNav ul li a {
   padding: 0 15px;
@@ -251,4 +253,222 @@ nav.navbar .userAccess ul li a.cart .notification {
 
 body {
   font-family: "Josefin Sans", sans-serif;
+}
+
+#banner {
+  overflow-x: hidden;
+  height: calc(100vh - 78px);
+  padding-bottom: 10px;
+}
+@media (max-width: 991px) {
+  #banner {
+    min-height: 95vh;
+  }
+}
+#banner .container,
+#banner .row {
+  height: 100%;
+}
+@media (min-width: 576px) and (max-width: 991px) {
+  #banner .productDetailSlider {
+    margin-top: 100px;
+  }
+}
+@media (min-width: 320px) and (max-width: 575px) {
+  #banner .productDetailSlider {
+    margin-top: -40%;
+  }
+}
+@media (min-width: 320px) and (max-width: 575px) {
+  #banner .productDetailSlide {
+    padding: 0 15px;
+  }
+}
+#banner .productDetailSlide h3 {
+  font-weight: 300;
+  font-size: 64px;
+  line-height: 74px;
+  color: #11161e;
+  width: 100%;
+  height: 68px;
+  overflow: hidden;
+  position: relative;
+}
+#banner .productDetailSlide h3 span {
+  position: absolute;
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-transition-delay: 0;
+          transition-delay: 0;
+}
+@media (min-width: 576px) and (max-width: 991px) {
+  #banner .productDetailSlide h3 {
+    font-size: 48px;
+  }
+}
+@media (min-width: 320px) and (max-width: 575px) {
+  #banner .productDetailSlide h3 {
+    font-size: 40px;
+    height: 60px;
+  }
+}
+#banner .productDetailSlide.slick-active .animateBanner span {
+  -webkit-transform: translateY(0%) !important;
+          transform: translateY(0%) !important;
+}
+#banner .productDetailSlide h2 {
+  font-weight: 700;
+  font-size: 68px;
+  line-height: 74px;
+  width: 100%;
+  height: 68px;
+  overflow: hidden;
+  position: relative;
+}
+#banner .productDetailSlide h2 span {
+  position: absolute;
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+}
+@media (min-width: 576px) and (max-width: 991px) {
+  #banner .productDetailSlide h2 {
+    font-size: 48px;
+  }
+}
+@media (min-width: 320px) and (max-width: 575px) {
+  #banner .productDetailSlide h2 {
+    font-size: 40px;
+    height: 60px;
+  }
+}
+#banner .productDetailSlide p {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
+  text-align: justify;
+  margin: 20px 0;
+  color: #444444;
+  width: 100%;
+  max-width: 530px;
+  -webkit-transform: translateY(50px);
+          transform: translateY(50px);
+  opacity: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-transition-delay: 0.25s;
+          transition-delay: 0.25s;
+}
+#banner .productDetailSlide a {
+  display: inline-block;
+  padding: 18px 35px;
+  background-color: #ff6f61;
+  color: white;
+  font-weight: 600;
+  font-size: 18px;
+  -webkit-transform: translateY(50px);
+          transform: translateY(50px);
+  opacity: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-transition-delay: 0.25s;
+          transition-delay: 0.25s;
+}
+#banner .productDetailSlide a span {
+  display: inherit;
+  margin-left: 5px;
+}
+@media (min-width: 320px) and (max-width: 575px) {
+  #banner .productDetailSlide a {
+    padding: 15px 20px;
+  }
+}
+#banner .productDetailSlide.slick-active .animateTop {
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+  opacity: 1;
+}
+@media (min-width: 320px) and (max-width: 575px) {
+  #banner .productImgSlider {
+    margin-top: -20%;
+  }
+}
+#banner .productImgSlider .productMainImageSlider {
+  z-index: 2;
+}
+#banner .productImgSlider .mainImageSlide img {
+  -webkit-transform: scale(0) translateX(-70px);
+          transform: scale(0) translateX(-70px);
+  margin: auto;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+#banner .productImgSlider .mainImageSlide.slick-active img {
+  -webkit-transform: scale(1) translateX(0px);
+          transform: scale(1) translateX(0px);
+}
+@media (min-width: 576px) and (max-width: 991px) {
+  #banner .productImgSlider .mainImageSlide.slick-active img {
+    -webkit-transform: scale(0.7) translateX(30px);
+            transform: scale(0.7) translateX(30px);
+  }
+}
+@media (min-width: 320px) and (max-width: 575.99px) {
+  #banner .productImgSlider .mainImageSlide.slick-active img {
+    -webkit-transform: scale(0.5) translateX(50px);
+            transform: scale(0.5) translateX(50px);
+  }
+}
+#banner .productImgSlider .productThubSlider {
+  position: relative;
+}
+#banner .productImgSlider .productThubSlider .stand img {
+  position: absolute;
+  top: -146px;
+  left: -140px;
+  z-index: 1;
+}
+@media (min-width: 320px) and (max-width: 991px) {
+  #banner .productImgSlider .productThubSlider .stand img {
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    width: 100%;
+  }
+}
+#banner .productImgSlider .productThubSlider .thubnailSliderWrapper {
+  position: absolute;
+  left: 126px;
+  bottom: -110px;
+  z-index: 10;
+  width: 200px;
+}
+@media (min-width: 576px) and (max-width: 991px) {
+  #banner .productImgSlider .productThubSlider .thubnailSliderWrapper {
+    left: 50%;
+    bottom: -38px;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+}
+@media (min-width: 320px) and (max-width: 575.99px) {
+  #banner .productImgSlider .productThubSlider .thubnailSliderWrapper {
+    bottom: 0px;
+  }
+}
+#banner .productImgSlider .productThubSlider .thumbSlider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+}
+#banner .productImgSlider .productThubSlider .thumbSlider img {
+  cursor: pointer;
+  margin: auto;
 }
